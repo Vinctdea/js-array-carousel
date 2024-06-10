@@ -8,28 +8,27 @@
 /***************************REGOLE MAIN******************/
 section{
     width: 40%;
-    margin: 10% auto;
-    
+    margin: 100px auto;
     
 }
 
 .container{
-    width: 400px;
-    height: 400px;
-    background-color: blueviolet;
+    position: relative;
     margin: 0 auto;
    
 }
 
-.container img{
+ img{
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
-    position: relative;
-    
-    
+    display: block;  
 }
+
+.item{
+    display: none;
+}
+
 .btn {
     background-color: rgb(129, 122, 122);
     border-radius: 50%;
@@ -44,14 +43,21 @@ section{
 
 .next{
     position: absolute;
-    top: 0;
-    left: auto;
+    top: 10px;
+    left: 48%;
+    cursor: pointer;
+    
     
 }
 
 .prev{
     position: absolute;
-    bottom: 0;
-    left: auto;
+    bottom: 10px;
+    left: 48%;
+    cursor: pointer;
 
+}
+
+.active{
+    display: block;
 }
