@@ -20,7 +20,6 @@ for (let i = 0; i < imgData.length; i++) {
 }
 
 // seleziono la lista
-
 const items = document.getElementsByClassName("item");
 let itemAttivi = 0;
 
@@ -33,4 +32,17 @@ const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 
 // click next
+next.addEventListener("click",
+    function(){
 
+        // tolgo la classe active al precedente
+        items[itemAttivi].classList.remove("active");
+
+        // incremento il valore di itemAttivi
+        itemAttivi++;
+
+        // associo classe active
+        items[itemAttivi].classList.add("active");
+
+    }
+);
