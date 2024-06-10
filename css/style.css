@@ -6,22 +6,14 @@
 }
 
 /***************************REGOLE MAIN******************/
-section{
+section, .container{
     width: 40%;
-    height: 100%;
     margin: 100px auto ;
     position: relative;
     
 }
 
-.container{
-/* 
-    width: 600px;
-    height: 400px; */
-   
-}
-
- img{
+img{
     width: 100%;
     height: 100%;
 }
@@ -36,7 +28,7 @@ section{
    
 }
 
-.next{
+.prev{
     position: absolute;
     top: 10px;
     left: 48%;
@@ -46,9 +38,8 @@ section{
     height: fit-content;
     cursor: pointer;
 }
-   
 
-.prev{
+.next{
     position: absolute;
     bottom: 10px;
     left: 48%;
@@ -58,6 +49,9 @@ section{
     height: fit-content;
     cursor: pointer;
 }
+   
+
+
     
 
 .active{

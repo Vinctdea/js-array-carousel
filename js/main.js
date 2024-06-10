@@ -34,6 +34,7 @@ const prev = document.querySelector(".prev");
 // click next
 next.addEventListener("click",
     function(){
+        if (itemAttivi < imgData.length -1) {
 
         // tolgo la classe active al precedente
         items[itemAttivi].classList.remove("active");
@@ -43,6 +44,43 @@ next.addEventListener("click",
 
         // associo classe active
         items[itemAttivi].classList.add("active");
+            
+        }else if(itemAttivi === imgData.length -1){
+            items[itemAttivi].classList.remove("active");
+            itemAttivi=0;
+            items[itemAttivi ].classList.add("active");
+            
+
+        }
+
 
     }
 );
+
+// click prev
+prev.addEventListener("click",
+    function(){
+        if (itemAttivi > 0 ) {
+
+        // tolgo la classe active al precedente
+        items[itemAttivi].classList.remove("active");
+
+        // decremento il valore di itemAttivi
+        itemAttivi--;
+
+        // associo classe active
+        items[itemAttivi].classList.add("active");
+            
+        } else if( itemAttivi <= 0){
+
+            items[itemAttivi].classList.remove("active");
+             itemAttivi= imgData.length -1;
+            items[itemAttivi].classList.add("active");
+            
+        }
+
+
+    }
+);
+
+
